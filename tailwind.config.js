@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from "tailwindcss/defaultTheme";
+import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
+import { Config } from "tailwindcss";
 
-export default {
+const config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -35,9 +36,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sora)", ...fontFamily.sans],
-        code: "var(--font-code)",
-        grotesk: "var(--font-grotesk)",
+        sans: ["var(--font-sora)", ...defaultTheme.fontFamily.sans],
+        code: ["var(--font-code)"],
+        grotesk: ["var(--font-grotesk)"],
       },
       letterSpacing: {
         tagline: ".15em",
@@ -70,6 +71,11 @@ export default {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+      },
+    },
+    variants: {
+      extend: {
+        textColor: ['hover'],
       },
     },
   },
@@ -130,3 +136,5 @@ export default {
     }),
   ],
 };
+
+export default config;
