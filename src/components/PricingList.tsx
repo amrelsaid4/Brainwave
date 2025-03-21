@@ -4,10 +4,10 @@ import Button from "./Button";
 import "../index.css";
 
 interface PricingItem {
-  id: number; // يجب أن يكون رقمًا فقط
+  id: number; 
   title: string;
   description: string;
-  price?: number; // ممكن يكون undefined
+  price?: number;
   features: string[];
 }
 
@@ -17,8 +17,8 @@ const PricingList = () => {
       {pricing.map((item) => {
         const parsedItem: PricingItem = {
           ...item,
-          id: Number(item.id), // تحويل id إلى رقم
-          price: item.price ? Number(item.price) : undefined, // تحويل price إلى رقم أو undefined إذا كان null
+          id: Number(item.id), 
+          price: item.price ? Number(item.price) : undefined, 
         };
 
         return (

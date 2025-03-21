@@ -7,13 +7,12 @@ import { roadmap } from "../constants";
 import { Gradient } from "./design/Roadmap";
 import "../index.css";
 
-// ✅ تعريف الـ Interface
 interface RoadmapItem {
   id: number;
   title: string;
   text: string;
   date: string;
-  status: "done" | "in-progress"; // تأكدنا من استخدام القيم الصحيحة
+  status: "done" | "in-progress"; 
   imageUrl: string;
   colorful?: boolean;
 }
@@ -28,7 +27,7 @@ const Roadmap = () => (
           const parsedItem: RoadmapItem = {
             ...item,
             id: Number(item.id),
-            status: item.status === "progress" ? "in-progress" : item.status, // تصحيح التسمية
+            status: item.status === "progress" ? "in-progress" : item.status, 
           };
 
           return (
