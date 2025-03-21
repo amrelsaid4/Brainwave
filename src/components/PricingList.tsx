@@ -1,6 +1,6 @@
 import { check } from "../assets/indext";
 import { pricing } from "../constants";
-import Button from "./button/Button";
+import Button from "./Button";
 import "../index.css";
 
 interface PricingItem {

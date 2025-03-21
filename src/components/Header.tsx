@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../index.css";
 import { brainwave } from "../assets/indext";
 import { navigation } from "../constants";
-import Button from "./button/Button";
+import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 
