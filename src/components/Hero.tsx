@@ -1,6 +1,6 @@
 import { curve, heroBackground, robot } from "../assets/indext";
-import "../index.css"
-import Button from "./Button";
+import "../index.css";
+import Button from "./button/Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
@@ -9,6 +9,7 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import "../index.css";
 
 const Hero: React.FC = () => {
   const parallaxRef = useRef<HTMLDivElement | null>(null);
@@ -65,7 +66,12 @@ const Hero: React.FC = () => {
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
                     {heroIcons.map((icon, index) => (
                       <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={`Icon ${index}`} />
+                        <img
+                          src={icon}
+                          width={24}
+                          height={25}
+                          alt={`Icon ${index}`}
+                        />
                       </li>
                     ))}
                   </ul>
