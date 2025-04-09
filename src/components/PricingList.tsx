@@ -43,7 +43,7 @@ const PricingList = () => {
             <Button
               className="w-full mb-6"
               href={
-                parsedItem.price ? "/pricing" : "mailto:contact@jsmastery.pro"
+                "/pricing" 
               }
               white={!!parsedItem.price}
             >
